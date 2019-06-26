@@ -1,0 +1,2014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="LCCCCoreData">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>1be812cc-1837-4ff9-bba4-8e1bb769c3d7</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsProcessStandard">
+      <Query>
+        <DataSourceName>LCCCCoreData</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ProcessId">
+          <DataField>ProcessId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="Parent">
+          <DataField>Parent</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="ParentOrigin">
+          <DataField>ParentOrigin</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="ResponsibleLawyer">
+          <DataField>ResponsibleLawyer</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Folder">
+          <DataField>Folder</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="NPJ">
+          <DataField>NPJ</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ClientProtocol">
+          <DataField>ClientProtocol</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ContractProtocol">
+          <DataField>ContractProtocol</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ContractStartId">
+          <DataField>ContractStartId</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ContractParent">
+          <DataField>ContractParent</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="DateReceived">
+          <DataField>DateReceived</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlDateTime</rd:TypeName>
+        </Field>
+        <Field Name="DateClosed">
+          <DataField>DateClosed</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlDateTime</rd:TypeName>
+        </Field>
+        <Field Name="CauseClosed">
+          <DataField>CauseClosed</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="Phase">
+          <DataField>Phase</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlByte</rd:TypeName>
+        </Field>
+        <Field Name="DateCitation">
+          <DataField>DateCitation</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlDateTime, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DateDistribution">
+          <DataField>DateDistribution</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlDateTime, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DatePrescription">
+          <DataField>DatePrescription</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlDateTime</rd:TypeName>
+        </Field>
+        <Field Name="TypeProcess">
+          <DataField>TypeProcess</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ValueCause">
+          <DataField>ValueCause</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlMoney</rd:TypeName>
+        </Field>
+        <Field Name="ObjectActionId">
+          <DataField>ObjectActionId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="SubObjectActionId">
+          <DataField>SubObjectActionId</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="JudicialDistrictId">
+          <DataField>JudicialDistrictId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="JudicialDistrictLocationId">
+          <DataField>JudicialDistrictLocationId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="Injunction">
+          <DataField>Injunction</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlBoolean</rd:TypeName>
+        </Field>
+        <Field Name="Fine">
+          <DataField>Fine</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlBoolean, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ValueFine">
+          <DataField>ValueFine</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlMoney, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="TypePeriodicity">
+          <DataField>TypePeriodicity</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="What">
+          <DataField>What</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="Agreement">
+          <DataField>Agreement</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlBoolean</rd:TypeName>
+        </Field>
+        <Field Name="FontProcess">
+          <DataField>FontProcess</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="InstanceId">
+          <DataField>InstanceId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="ActionId">
+          <DataField>ActionId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="Sphere">
+          <DataField>Sphere</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlByte</rd:TypeName>
+        </Field>
+        <Field Name="CauseId">
+          <DataField>CauseId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="CauseOriginId">
+          <DataField>CauseOriginId</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CDANumber">
+          <DataField>CDANumber</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CDAValue">
+          <DataField>CDAValue</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlMoney, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CDADate">
+          <DataField>CDADate</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlDateTime, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Enabled">
+          <DataField>Enabled</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="CreatedOn">
+          <DataField>CreatedOn</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlDateTime</rd:TypeName>
+        </Field>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedOn">
+          <DataField>ModifiedOn</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlDateTime</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedBy">
+          <DataField>ModifiedBy</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="Secrecy">
+          <DataField>Secrecy</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlBoolean</rd:TypeName>
+        </Field>
+        <Field Name="ProcessDistribution">
+          <DataField>ProcessDistribution</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlBoolean</rd:TypeName>
+        </Field>
+        <Field Name="TotalRowCount">
+          <DataField>TotalRowCount</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="PhoneOppositeLawyerName">
+          <DataField>PhoneOppositeLawyerName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DateSentence">
+          <DataField>DateSentence</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlDateTime, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ValueSentence">
+          <DataField>ValueSentence</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlMoney, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ValueUpdated">
+          <DataField>ValueUpdated</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlMoney, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="AppointmentCount">
+          <DataField>AppointmentCount</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlBoolean, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CreatedByName">
+          <DataField>CreatedByName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedByName">
+          <DataField>ModifiedByName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ParentName">
+          <DataField>ParentName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ParentOriginName">
+          <DataField>ParentOriginName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ContractParentName">
+          <DataField>ContractParentName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ValueContingency">
+          <DataField>ValueContingency</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlMoney</rd:TypeName>
+        </Field>
+        <Field Name="Contingency">
+          <DataField>Contingency</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="OppositeParty">
+          <DataField>OppositeParty</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Probability">
+          <DataField>Probability</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ResponsibleLawyerName">
+          <DataField>ResponsibleLawyerName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ResponsibleOppositeLawyerName">
+          <DataField>ResponsibleOppositeLawyerName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="NumberProcess">
+          <DataField>NumberProcess</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ProcessNumbers">
+          <DataField>ProcessNumbers</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ProcessNumberMain">
+          <DataField>ProcessNumberMain</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="Parte">
+          <DataField>Parte</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ParteAutor">
+          <DataField>ParteAutor</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ParteReu">
+          <DataField>ParteReu</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="JudicialDistrictName">
+          <DataField>JudicialDistrictName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="JudicialDistrictLocationName">
+          <DataField>JudicialDistrictLocationName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="JudicialDistrictLocationNumber">
+          <DataField>JudicialDistrictLocationNumber</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="JudicialDistrictLocationRegionalCourt">
+          <DataField>JudicialDistrictLocationRegionalCourt</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ObjectActionName">
+          <DataField>ObjectActionName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="SubObjectActionName">
+          <DataField>SubObjectActionName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="InjunctionName">
+          <DataField>InjunctionName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="FineName">
+          <DataField>FineName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="AgreementName">
+          <DataField>AgreementName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="InstanceName">
+          <DataField>InstanceName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ActionName">
+          <DataField>ActionName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="SphereName">
+          <DataField>SphereName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CauseName">
+          <DataField>CauseName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CauseOriginName">
+          <DataField>CauseOriginName</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ReuCustomerId">
+          <DataField>ReuCustomerId</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlInt32</rd:TypeName>
+        </Field>
+        <Field Name="Fulfilled">
+          <DataField>Fulfilled</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlBoolean</rd:TypeName>
+        </Field>
+        <Field Name="FulfilledYesDate">
+          <DataField>FulfilledYesDate</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlDateTime</rd:TypeName>
+        </Field>
+        <Field Name="FulfilledNoDetails">
+          <DataField>FulfilledNoDetails</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="ProgressId">
+          <DataField>ProgressId</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DateProgress">
+          <DataField>DateProgress</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlDateTime, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DetailsProgress">
+          <DataField>DetailsProgress</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="SecrecyName">
+          <DataField>SecrecyName</DataField>
+          <rd:TypeName>System.Data.SqlTypes.SqlString</rd:TypeName>
+        </Field>
+        <Field Name="NumberOfDays">
+          <DataField>NumberOfDays</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>LC.CC.Core.Data</rd:DataSetName>
+        <rd:TableName>ProcessCollection</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>FindAll</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[LC.CC.Core.Data.Process] FindAll(System.Predicate`1[LC.CC.Core.Data.Process])</rd:ObjectDataSourceSelectMethodSignature>
+        <rd:ObjectDataSourceType>LC.CC.Core.Data.ProcessCollection, LC.CC.Core.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix3">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>16.77333cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>18.75539cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle1">
+                          <ReportItems>
+                            <Textbox Name="Folder">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Folder.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Folder</rd:DefaultName>
+                              <Top>0.21166cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>2.5cm</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox20">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Pasta.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox20</rd:DefaultName>
+                              <Top>0.21166cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Status">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Status.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Status</rd:DefaultName>
+                              <Top>0.21166cm</Top>
+                              <Left>15.0986cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>1.41015cm</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox23">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Escritório Responsável.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>1.03217cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox24">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Escritório de Origem.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>1.66745cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.21438cm</Width>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox25">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Cliente.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>2.23218cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ResponsibleLawyerName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ResponsibleLawyerName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ResponsibleLawyerName</rd:DefaultName>
+                              <Top>5.40887cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>6</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ContractParentName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ContractParentName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ContractParentName</rd:DefaultName>
+                              <Top>2.23218cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>7</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox26">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Parte Contrária.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>3.39691cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>8</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox27">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Tipo da Ação.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>3.89108cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>9</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox28">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Posição do Cliente.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>2.79691cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>10</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox30">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Nº Principal.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>4.42053cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>11</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox31">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Órgão Principal.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>4.9147cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>12</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox32">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Advogado Responsável.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>5.40887cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.21438cm</Width>
+                              <ZIndex>13</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox33">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Advogado Contrário.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>5.97359cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>14</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox35">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Natureza.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>6.43248cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>15</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox36">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Objeto da Ação.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>7.03249cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>16</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox37">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Últ Evento Em.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>7.52666cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>17</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox38">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Data de Distribuição.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>8.0561cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>18</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox39">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Data de Cadastro.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>8.65611cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>19</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox43">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Valor da Causa.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>9.15028cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>20</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox49">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Probabilidade.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>9.72382cm</Top>
+                              <Height>0.49417cm</Height>
+                              <Width>3.24083cm</Width>
+                              <ZIndex>21</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ValueCause">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ValueCause.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <Format>'R$' #,0.00;('R$' #,0.00)</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ValueCause</rd:DefaultName>
+                              <Top>9.17674cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>22</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ActionName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ActionName.Value</Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ActionName</rd:DefaultName>
+                              <Top>3.89108cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>23</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="DateDistribution">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!DateDistribution.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <Format>dd/MM/yyyy</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>DateDistribution</rd:DefaultName>
+                              <Top>8.08256cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>24</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="DateReceived">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!DateReceived.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <Format>dd/MM/yyyy</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>DateReceived</rd:DefaultName>
+                              <Top>8.68257cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>25</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="CauseName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!CauseName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>CauseName</rd:DefaultName>
+                              <Top>6.45894cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>26</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ParentName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ParentName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ParentName</rd:DefaultName>
+                              <Top>1.06745cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>27</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="JudicialDistrictName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!JudicialDistrictName.Value</Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>JudicialDistrictName</rd:DefaultName>
+                              <Top>4.9147cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>28</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Probability">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Probability.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Probability</rd:DefaultName>
+                              <Top>9.72382cm</Top>
+                              <Left>3.31139cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>29</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ResponsibleOppositeLawyerName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ResponsibleOppositeLawyerName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ResponsibleOppositeLawyerName</rd:DefaultName>
+                              <Top>5.97359cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>30</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ParentOriginName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ParentOriginName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ParentOriginName</rd:DefaultName>
+                              <Top>1.66745cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>31</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ProcessNumberMain">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ProcessNumberMain.Value</Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ProcessNumberMain</rd:DefaultName>
+                              <Top>4.38525cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>32</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="DateProgress">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!DateProgress.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <Format>dd/MM/yyyy</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>DateProgress</rd:DefaultName>
+                              <Top>7.55312cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>33</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ObjectActionName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ObjectActionName.Value</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ObjectActionName</rd:DefaultName>
+                              <Top>7.05895cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>34</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="ParteReu">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ParteReu.Value</Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>ParteReu</rd:DefaultName>
+                              <Top>3.39691cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>35</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="txtParte">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=IIf(First(Fields!ContractParentName.Value, "dsProcessStandard") = First(Fields!ParteReu.Value, "dsProcessStandard"),"Réu", IIf(First(Fields!ContractParentName.Value, "dsProcessStandard") = First(Fields!ParteAutor.Value, "dsProcessStandard"), "Autor", "Réu"))</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>2.76163cm</Top>
+                              <Left>3.34667cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>13.16208cm</Width>
+                              <ZIndex>36</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox1">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Status.:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox1</rd:DefaultName>
+                              <Top>0.21166cm</Top>
+                              <Left>13.81908cm</Left>
+                              <Height>0.49417cm</Height>
+                              <Width>1.20896cm</Width>
+                              <ZIndex>37</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>dsProcessStandard</DataSetName>
+            <Top>0.09702cm</Top>
+            <Left>0.05292cm</Left>
+            <Height>18.75539cm</Height>
+            <Width>16.77333cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>7.42221in</Height>
+        <Style />
+      </Body>
+      <Width>6.66617in</Width>
+      <Page>
+        <PageHeader>
+          <Height>1.69334cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="Image2">
+              <Source>External</Source>
+              <Value>="file:\\\"&amp;Parameters!pLogotipo.Value</Value>
+              <Sizing>FitProportional</Sizing>
+              <Height>1.47919cm</Height>
+              <Width>5.33646cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="txtTitulo">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Relatório de Processo Capa Padrão</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>#404040</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.0532cm</Top>
+              <Left>8.72528cm</Left>
+              <Height>0.6cm</Height>
+              <Width>7.83639cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Data Emissão:</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>#404040</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.84392cm</Top>
+              <Left>11.37646cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.68521cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="pDateIssue">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!pDateIssue.Value</Value>
+                      <Style>
+                        <Format>dd/MM/yyyy</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>pDateIssue</rd:DefaultName>
+              <Top>0.84392cm</Top>
+              <Left>14.06167cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Line Name="Line1">
+              <Top>1.58503cm</Top>
+              <Height>0cm</Height>
+              <Width>16.56167cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+              </Style>
+            </Line>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>1.24354cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Copyright © Legal Control. Todos os direitos reservados</Value>
+                      <Style>
+                        <FontSize>6pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox4</rd:DefaultName>
+              <Top>0.14111cm</Top>
+              <Left>5.63939cm</Left>
+              <Height>0.49417cm</Height>
+              <Width>5.92159cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PageNumber">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style>
+                        <FontSize>6pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PageNumber</rd:DefaultName>
+              <Top>0.14111cm</Top>
+              <Left>14.65478cm</Left>
+              <Height>0.49417cm</Height>
+              <Width>1.64193cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Image Name="Image3">
+              <Source>Embedded</Source>
+              <Value>logo1</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.14111cm</Top>
+              <Left>0.11806cm</Left>
+              <Height>0.49417cm</Height>
+              <Width>3.00813cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="Textbox5">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Versão 4.7.50</Value>
+                      <Style>
+                        <FontSize>6pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>DimGray</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox5</rd:DefaultName>
+              <Top>0.14111cm</Top>
+              <Left>3.19675cm</Left>
+              <Height>0.49417cm</Height>
+              <Width>1.68993cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="pDateIssue">
+      <DataType>DateTime</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pLogotipo">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>pDateIssue</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>pLogotipo</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAPoAAAA8CAYAAABPXaeUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowOTgwMTE3NDA3MjA2ODExODIyQUY3NzlGNjM5ODQ0OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MjBBNjc4NkFBMDUxMUUzODI2QUEwOTQ4MDA3QjZDNiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MjBBNjc4NUFBMDUxMUUzODI2QUEwOTQ4MDA3QjZDNiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBN
+TTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcwRDFBRkVGNkJBNUUzMTFCRTZCQzkzMDJCNjgzNzAxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5ODAxMTc0MDcyMDY4MTE4MjJBRjc3OUY2Mzk4NDQ4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+B1OqGwAAEk1JREFUeNrsXQmYFMUVLhYFkQVRvBCIazw4FOSSeKFo4pF44BHEA5V4oGCUoKviEVzBAxXQBOXwiBgCRrIqiVEERUBUDgOCiEgUARWjoBBFNHJt/t9581FbTvVMz1TPbO/W+7739UxVd1V1Vf1dr169elWroqJCefLkqXpTrSgSPahD6Z64HAvuCG4DLgE3Ae+q3fYteA34I/C74AXgV/+9YOgy3yyePFVRoAPczXHpCe4ObpdD2gR+OfivAP2bvok8eaoCQAfAOXKXgk+JQEJ4CzwM/BRAv8U3lydPeQY6AN4Jl3vBx+WhnB+AbwbY/+abzJOnPAAdAG+IyxBwnwKUdyr4SgB+RRSJbyhtVQeX8/UPTIOhS1+L6mUkP+oxfgKu5zDpeSj3uynyo56kA7gxuMhVZshrbBbvzr7XDbwMzy8N8dzeuJysBb2G5z/wUA6mHUKC/AjOnaVjFoJOBC9BOa4D2EdFkP7O4Me1/0+wI0UA8Nq43AC+XlVWULqi/iqh4EzmdyAuI8G/iKhdxmbxzEBwGXg1ytcSYP0mw+daGm30G5H4PLkAOsB1NS7DQzwzDzwdPJdfbfDn4M0ykhBQjVRCG98azGlAV/BeGaTLkW+k6AYuB+A3xLDeHwJfkY+MACLW8RzwblXl5aVMN8nfpuBbtP+eCgF0AIoi1lDwtRmk9zF4NEdCAHB1wH3/BX8qo84LWl4UY6m175UB6HuA
+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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="logo1">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAGoAAAAYCAYAAAASy2hdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowOTgwMTE3NDA3MjA2ODExODIyQUY3NzlGNjM5ODQ0OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MTg2MzM1MkE5RkIxMUUzQjY0NkIxRjRCMTU5QTVFMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MTg2MzM1MUE5RkIxMUUzQjY0NkIxRjRCMTU5QTVFMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBN
+TTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcwRDFBRkVGNkJBNUUzMTFCRTZCQzkzMDJCNjgzNzAxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5ODAxMTc0MDcyMDY4MTE4MjJBRjc3OUY2Mzk4NDQ4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+V7LMgAAABkZJREFUeNrsWmlsVFUUfrUtWxVEwRVta6JEoaRoMJZFBbFG44JEUbCCIS5hcUtrS1VcIoWWBooobmhEAVtNlFZAURSLoFIaTZFoC4IMRCpSo1YZaKWL34nfS643776lM7Xzoyf5Mm/eu3O3c8853zlv4ooKCy0XOQ3IAsYBFwMDgQTgd6AO+BwoA2qsbumQ5Obl+WqXYLg/AJgP3AUkOjzvD2QQMtJm4BGg2seY8cBJwFHgb5/rSTLMw5ZW4C/l+8ke/TURuvQwzOlEIE4b43+VExzu3QTsBu5RNucw8B7wPLAM+ID3bLkC2AbMoyLcJI0WOcXH/EYDIeAIf2PCFrZ/zEdbwRzDYdgLTHN4tk4Zo0tEt6gZVIatwK3AM8BGoF1rKyfsMuAh4Fb+RjZqCHA70ByF+S0AegM3UAEmkWen86BsAIqBNpf2IYd74hkGAQuBNcCfseQiEzRLWkYFtFABLzgoyBa5/xWxlLFKFjoBWA5MjcL8BgPbeaK9ZBQ/3wY2BRxH5p3D394GPAlkx6KizgRWUEmt3Oz1Afr5gvFKLDAZuBP4ECiNcH4SM8YA04HfXNo1Gg5UP2Csw/06QrXcH+iOJX4+ALwK1MaaogqUAJytKGkgT2olWZ+4gwYgne5wLN3Id8BPtMrt3OBixrVIXWBf4DWPNjvoAXRJpRvT5WngKV6PILO9hu7yQa5nCe/FhEhcOYMTtcjanlOe38GF
+ioV9ylP2MFDOuLGOSlY3rITXZ/skDF5Sq7AuE9INv63R2qU6xNkSHrqPeW8PsAjI5LpjRlHTFXZX5BGE9UU6ySLFirIcnjf7pNAWGdpBIOyjrR38+wRY/y3ASKYWqhTQQ4gSe5Gy9+tq15epLPT9KPTZQNc5Ebgc6Km5v71s8yhwgUsutYGxbzKwCvjVZcyDJEKi2CeAoYZ++yrXPXkw36QnUCVM5ZXyUwjT1UAFsM8wh2NAfmcqaiivvwaOR6nfzVRUApnbt8oz2cCrgNnAWS59iMXNYgy8EEhxadvOBHocUwy3fitIJEZxXnMN7cqYx8nY91ERl7jMI9zZFtWf1wei2G+tVobSZScX70ceDzBuTYB+LR80frZyXdjVMcqtStFRae2u4kXfohqY1Q+KYr8pWszSZTwrAamWud5okSI/S99/IxmqLi2MGxJvPgFW01LcKP1FLIPlMEZn+lhPyIP0bOGajjGPvBs4x8EA2hhTZX4rFhYVvSIVnty8vGFeitrBiY6wzEXJoDJa2cQ67VkfUv5DwMsecXEbFVTA2FLm0CaR7m6NkvdNYaI8k7HLKZFOJu1fC3zP+6cwZn1EMqMfGpNIHLsf+Bl4lwSligRH9y7xjN+vk6RIaDjXj0VtoqJk0tcxR4pERBE3K7XCZockVMZaDLwYIEaJMn4xtDnKGuV5/L6LJKaKFHyXS/9rNcuZywOyJICiLJae0pmHWexno6GtFAXkFdHwIDGqTCm/5LjkR05My0lmKjnSWwYLsOlskOqJW4UjrFiKRWsdwzShmpsYDYkjo0zRMJ6lJzlISWzr5ins1yW9gsSo/cA7XEwa6371fL6avrmSrFAGkNcbn/G0XO/gu69VcptVXRh/xe3OYaqwkuUuKTM1dbA/eUOw3CXxraery+hM1pdP/5qpKMkmAuIK/6CLrKZiK+hu1rMupspEmnZ+AKvpTJHi8DDmi+LSzu9gP8XcI4mBV/IgirzExD3Fw8VGRVH7
+OFgVv6eRufiVSxkLRBqZeK70oO49fPbdprlMJ+nt4W7qubnCCr+x/n1zHVSS+fsvaaW2su7l+o9rLt3tBWqSkvw3+0mNVGp8RFGSWM8A1urmkRQ4xaQhLLFM5fNZPGFuWXqIk5tBpbV6JLC7lRNd6dAmnn01eVDoFsbgrWRckeaHe6isSrI8O1Ts5HUu2Vy7gXhY9EZCgCaBpi9ws8gEA9W0C5t2jnGYbi/EBZ9KOj9YC7QZVJTlEUinsdZX7HGaCtlmJOPhBIPFHaAHCLNm6fY2uJylozes//6dwO6r0RDHGh1cua0sca9LObawyGxaWolhDoeoSEmNfmRel0VC4sxiDP9CEgo9nwE03sdJC3HjS61uCSSR/gtJYtZkan0SY85wusNEntz9DM7lPFEt3dveefKPAAMA7hycY2YckVcAAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>a2c212a4-e1e7-4349-ad73-9a8b12d460e7</rd:ReportID>
+</Report>
